@@ -14,7 +14,7 @@ export default class Card extends React.Component {
         this.setState({ showDetails: !this.state.showDetails });
     }
     render() {
-        
+
         return (
             <div className={styles.Card}>
                 <div className={styles[`SideBar--${this.props.status}`]} />
@@ -29,7 +29,8 @@ export default class Card extends React.Component {
                         <TaskList
                             key={this.props.id}
                             cardId={this.props.id}
-                            tasks={this.props.tasks} />
+                            tasks={this.props.tasks}
+                            taskCallbacks={this.props.taskCallbacks} />
                     </div>}
             </div>
         )
